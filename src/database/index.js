@@ -1,8 +1,8 @@
-import { Sequelize } from "sequelize";
+import Sequelize from "sequelize";
 
 import configDatabase from '../config/database';
 
-import User from '../app/models/Users'
+import User from '../app/models/Users';
 
 const models = [User];
 

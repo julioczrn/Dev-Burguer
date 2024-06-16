@@ -15,7 +15,7 @@ class UserController {
         try {
           schema.validateSync(request.body, { abortEarly: false});
         } catch(err){
-          return response.status(400).json({ error: err.erros })
+          return response.status(400).json({ error: err.error })
         }
         
         const {name, email, password, admin} = request.body;
@@ -34,7 +34,7 @@ class UserController {
             id: v4(),
             name,
             email,
-            password_hash,
+            password,
             admin,
             }); 
             return response.status(201).json({
